@@ -1,0 +1,11 @@
+[Unit]
+Description=Kaspi Otzovik Service
+After=network.target
+
+[Service]
+ExecStart=/bin/bash /home/www/kaspi_otzokiv/run.sh
+Restart=always
+User=www
+
+[Install]
+WantedBy=multi-user.target

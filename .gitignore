@@ -1,6 +1,76 @@
-.env
+# Python bytecode files
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+.venv/
+.env/
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.iml
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# macOS specific files
 .DS_Store
-.log
-log
-.logs
-logs
+
+# Windows specific files
+Thumbs.db
+Desktop.ini
+
+# Logs and temp files
+*.log
+*.log.*
+*.out
+*.err
+
+# Backup files
+*~
+*.bak
+*.swp
+
+# Test reports
+coverage/
+nosetests.xml
+*.cover
+*.hypothesis/
+*.tox/
+
+# Coverage.py files
+.coverage
+.coverage.*
+
+# PyInstaller
+dist/
+build/
+*.spec
+
+# Mypy
+.mypy_cache/
+.dmypy.json
+
+# pipenv
+Pipfile.lock
+
+# Poetry
+poetry.lock
+
+# pytest
+.cache/
+
+# Sphinx documentation
+docs/_build/
+
+# Pytest cache
+*.pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
