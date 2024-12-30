@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-22 16:17+0500\n"
+"POT-Creation-Date: 2024-12-30 17:47+0500\n"
 "PO-Revision-Date: 2024-12-22 16:17+0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: kk\n"
@@ -35,12 +35,14 @@ msgid " iPhone 16, 42145214, 110145324, 77089091122\n"
 msgstr " iPhone 16, 42145214, 110145324, 77089091122\n"
 
 #: handlers/users/about.py:16
-msgid "2) После генерации шаблона, вы получите уникальную ссылку для отправки в WhatsApp.\n"
-msgstr "2) Шаблон жасалғаннан кейін, сіз WhatsApp-та жіберуге арналған ерекше сілтеме аласыз.\n"
+msgid ""
+"2) После генерации шаблона, вы получите уникальную ссылку для отправки в "
+"WhatsApp.\n"
+msgstr "2) Шаблон жасалғаннан кейін, сіз WhatsApp арқылы жіберуге арналған ерекше сілтеме аласыз.\n"
 
 #: handlers/users/about.py:17
 msgid "3) Просто нажмите на ссылку, и ваш шаблон будет отправлен в WhatsApp.\n"
-msgstr "3) Сілтемеге басып, шаблоныңызды WhatsApp-қа жібере аласыз.\n"
+msgstr "3) Сілтемеге басып, шаблоныңызды WhatsApp-қа жіберуге болады.\n"
 
 #: handlers/users/about.py:18
 msgid "👉 Нажмите /start, чтобы начать."
@@ -85,139 +87,153 @@ msgstr "Сәлеметсіз бе!\n"
 
 #: handlers/users/menu.py:14 handlers/users/menu.py:24
 #: handlers/users/start.py:21
-msgid "Я помогу тебе быстро сгенерировать ссылку на отзыв Kaspi с 5 ⭐ для быстрой отправки в WhatsApp\n"
-msgstr "Мен сізге Kaspi туралы 5 жұлдызды ⭐ пікір қалдыруға арналған сілтеме жасауға көмектесемін, ол WhatsApp арқылы жылдам жіберіледі.\n"
+msgid ""
+"Я помогу тебе быстро сгенерировать ссылку на отзыв Kaspi с 5 ⭐ для "
+"быстрой отправки в WhatsApp\n"
+msgstr ""
+"Мен сізге Kaspi туралы 5 жұлдызды ⭐ пікір қалдыруға арналған сілтеме жасауға көмектесемін, ол WhatsApp арқылы жылдам жіберіледі.\n"
 
 #: handlers/users/menu.py:15 handlers/users/menu.py:25
 #: handlers/users/start.py:22
 msgid "⬇ Готов? Нажми на кнопку «Сгенерировать ссылку» чтобы начать!"
 msgstr "⬇ Дайынсыз ба? «Сілтеме жасау» батырмасын басып бастаңыз!"
 
-#: handlers/users/profile.py:14
+#: handlers/users/profile.py:15
 msgid "👤 Мой профиль\n"
 msgstr "👤 Менің профилім\n"
 
-#: handlers/users/review_generator.py:26 handlers/users/review_generator.py:52
+#: handlers/users/review_generator.py:31 handlers/users/review_generator.py:58
 msgid "Отправьте мне следующие данные:\n"
 msgstr "Маған келесі деректерді жіберіңіз:\n"
 
-#: handlers/users/review_generator.py:27
-msgid "<b><u>Имя Товара</u></b>, <b><u>Номер Заказа</u></b>, <b><u>Артикул Продукта</u></b>, <b><u>Номер Телефона</u></b>\n"
-msgstr "<b><u>Тауардың атауы</u></b>, <b><u>Тапсырыс нөмірі</u></b>, <b><u>Өнімнің код нөмірі</u></b>, <b><u>Телефон нөмірі</u></b>\n"
+#: handlers/users/review_generator.py:32
+msgid ""
+"<b><u>Имя Товара</u></b>, <b><u>Номер Заказа</u></b>, <b><u>Артикул "
+"Продукта</u></b>, <b><u>Номер Телефона</u></b>\n"
+msgstr ""
+"<b><u>Тауардың атауы</u></b>, <b><u>Тапсырыс нөмірі</u></b>, "
+"<b><u>Өнімнің код нөмірі</u></b>, <b><u>Телефон нөмірі</u></b>\n"
 
-#: handlers/users/review_generator.py:28 handlers/users/review_generator.py:57
+#: handlers/users/review_generator.py:33 handlers/users/review_generator.py:63
 msgid "📋 Пример:\n"
 msgstr "📋 Мысал:\n"
 
-#: handlers/users/review_generator.py:29
+#: handlers/users/review_generator.py:34
 msgid "<b>iPhone 16, 42145214, 110145324, 77089091122</b>"
 msgstr "<b>iPhone 16, 42145214, 110145324, 77089091122</b>"
 
-#: handlers/users/review_generator.py:43
+#: handlers/users/review_generator.py:48
 msgid "✉️ Отпавить шаблон в WhatsApp"
 msgstr "✉️ Шаблонды WhatsApp-қа жіберу"
 
-#: handlers/users/review_generator.py:51
+#: handlers/users/review_generator.py:57
 msgid "❗ Не Правильный Ввод, Попробуйте Снова!\n"
 msgstr "❗ Дұрыс емес енгізу, қайтадан тәжірибе жасап көріңіз!\n"
 
-#: handlers/users/review_generator.py:53
+#: handlers/users/review_generator.py:59
 msgid "<b><u>Имя Товара</u></b>"
 msgstr "<b><u>Тауар атауы</u></b>"
 
-#: handlers/users/review_generator.py:54
+#: handlers/users/review_generator.py:60
 msgid "<b><u>Номер Заказа</u></b>"
 msgstr "<b><u>Тапсырыс нөмірі</u></b>"
 
-#: handlers/users/review_generator.py:55
+#: handlers/users/review_generator.py:61
 msgid "<b><u>Артикул Продукта</u></b>"
 msgstr "<b><u>Өнім код нөмірі</u></b>"
 
-#: handlers/users/review_generator.py:56
+#: handlers/users/review_generator.py:62
 msgid "<b><u>Номер Телефона</u></b>\n"
 msgstr "<b><u>Телефон нөмірі</u></b>\n"
 
-#: handlers/users/review_generator.py:58
+#: handlers/users/review_generator.py:64
 msgid "<b><u>iPhone 16, 42145214, 110145324, 77089091122</u></b>"
 msgstr "<b><u>iPhone 16, 42145214, 110145324, 77089091122</u></b>"
 
-#: handlers/users/review_generator.py:75
+#: handlers/users/review_generator.py:82
 msgid "Отправьте ваш шаблонный текст одним сообщением.\n"
 msgstr "Шаблондық мәтініңізді бір хабарлама ретінде жіберіңіз.\n"
 
-#: handlers/users/review_generator.py:76
+#: handlers/users/review_generator.py:83
 msgid "В шаблоне должны присутствовать следующие данные:\n"
 msgstr "Шаблонда келесі деректер болуы керек:\n"
 
-#: handlers/users/review_generator.py:77
+#: handlers/users/review_generator.py:84
 msgid "<b><u>{ordercode}</u></b> — номер заказа"
 msgstr "<b><u>{ordercode}</u></b> — тапсырыс нөмірі"
 
-#: handlers/users/review_generator.py:78
+#: handlers/users/review_generator.py:85
 msgid "<b><u>{productname}</u></b> — имя товара\n"
 msgstr "<b><u>{productname}</u></b> — тауар атауы\n"
 
-#: handlers/users/review_generator.py:79
+#: handlers/users/review_generator.py:86
 msgid "<b><u>{link}</u></b> — ссылка на отзыв\n"
 msgstr "<b><u>{link}</u></b> — пікір сілтемесі\n"
 
-#: handlers/users/review_generator.py:80
-msgid "Также шаблон должен содержать не меньше <b><u>50</u></b> и не больше <b><u>4096</u></b> символов!\n"
-msgstr "Шаблонда кемінде <b><u>50</u></b> және аспауы тиіс <b><u>4096</u></b> таңба болуы тиіс!\n"
+#: handlers/users/review_generator.py:87
+msgid ""
+"Также шаблон должен содержать не меньше <b><u>50</u></b> и не больше "
+"<b><u>4096</u></b> символов!\n"
+msgstr ""
+"Шаблонда кемінде <b><u>50</u></b> және аспауы тиіс <b><u>4096</u></b> таңба болуы тиіс!\n"
 
-#: handlers/users/review_generator.py:81
+#: handlers/users/review_generator.py:88
 msgid "Пример:\n"
 msgstr "Мысал:\n"
 
-#: handlers/users/review_generator.py:82 handlers/users/review_generator.py:90
+#: handlers/users/review_generator.py:89 handlers/users/review_generator.py:97
 msgid "------------------------"
 msgstr "------------------------"
 
-#: handlers/users/review_generator.py:83
+#: handlers/users/review_generator.py:90
 msgid "Здравствуйте!\n"
 msgstr "Сәлеметсіз бе!\n"
 
-#: handlers/users/review_generator.py:84
+#: handlers/users/review_generator.py:91
 msgid "Ваш заказ № <b><u>{ordercode}</u></b>"
 msgstr "Сіздің тапсырысыңыз № <b><u>{ordercode}</u></b>"
 
-#: handlers/users/review_generator.py:85
+#: handlers/users/review_generator.py:92
 msgid "Имя товара: <b><u>{productname}</u></b>\n"
 msgstr "Тауар атауы: <b><u>{productname}</u></b>\n"
 
-#: handlers/users/review_generator.py:86
+#: handlers/users/review_generator.py:93
 msgid "Будем благодарны, если вы оставите отзыв c 5 ⭐\n"
 msgstr "5 жұлдызды ⭐ пікір қалдырсаңыз, ризашылығымызды білдіреміз.\n"
 
-#: handlers/users/review_generator.py:87
+#: handlers/users/review_generator.py:94
 msgid "Ссылка на отзыв: <b><u>{link}</u></b>\n"
 msgstr "Пікірге сілтеме: <b><u>{link}</u></b>\n"
 
-#: handlers/users/review_generator.py:88
+#: handlers/users/review_generator.py:95
 msgid "С уважением,"
 msgstr "Құрметпен,"
 
-#: handlers/users/review_generator.py:89
+#: handlers/users/review_generator.py:96
 msgid "Каспи магазин"
 msgstr "Kaspi дүкені"
 
-#: handlers/users/review_generator.py:99
+#: handlers/users/review_generator.py:106
 msgid "✅ Шаблон успешно обновлен!"
 msgstr "✅ Шаблон сәтті жаңартылды!"
 
-#: handlers/users/review_generator.py:106
+#: handlers/users/review_generator.py:113
 msgid "Не верный шаблонный текст, попробуйте заново!\n"
 msgstr "Дұрыс емес шаблондық мәтін, қайтадан тәжірибе жасап көріңіз!\n"
 
-#: handlers/users/review_generator.py:107
+#: handlers/users/review_generator.py:114
 msgid "В шаблоне должны быть <b><u>{ordercode} {productname} {link}</u></b>\n"
-msgstr "Шаблонда <b><u>{ordercode} {productname} {link}</u></b> деректері болуы керек.\n"
+msgstr ""
+"Шаблонда <b><u>{ordercode} {productname} {link}</u></b> деректері болуы керек.\n"
 
-#: handlers/users/review_generator.py:108
-msgid "Также шаблон должен содержать не меньше <b><u>50</u></b> и не больше <b><u>4096</u></b> символов"
-msgstr "Шаблонда кемінде <b><u>50</u></b> және аспауы тиіс <b><u>4096</u></b> таңба болуы тиіс."
+#: handlers/users/review_generator.py:115
+msgid ""
+"Также шаблон должен содержать не меньше <b><u>50</u></b> и не больше "
+"<b><u>4096</u></b> символов"
+msgstr ""
+"Шаблонда кемінде <b><u>50</u></b> және аспауы тиіс <b><u>4096</u></b> таңба болуы тиіс."
 
-#: handlers/users/review_generator.py:116
+#: handlers/users/review_generator.py:123
 msgid "✅ Шаблон сброшен по умолчанию!"
 msgstr "✅ Шаблон әдепкі күйге қайтарылды!"
 

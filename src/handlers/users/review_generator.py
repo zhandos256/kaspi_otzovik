@@ -7,8 +7,8 @@ from aiogram.utils.markdown import hlink
 from aiogram.utils.i18n import gettext as _
 
 from db.query import (
-    get_template_msg, 
-    update_template_msg, 
+    get_template_msg,
+    update_template_msg,
     reset_template_msg_default,
     increment_counter
     )
@@ -74,6 +74,7 @@ async def template_msg(call: types.CallbackQuery):
 
 class EditTemplate(StatesGroup):
     text = State()
+
 
 @router.callback_query(F.data == 'edit_template')
 async def edit_template_msg(call: types.CallbackQuery, state: FSMContext):

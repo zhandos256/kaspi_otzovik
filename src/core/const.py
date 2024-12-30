@@ -1,12 +1,11 @@
 import textwrap
-from os import getenv
 from pathlib import Path
 
 from aiogram.types import BotCommand
 
 DEBUG = 0
 
-TOKEN = getenv('KASPI_OTZOVIK_BOT', 'define me!')
+TOKEN = "7692919718:AAH0myJyR66DbGjQvc9Bl1YBeCHOl-nnyjs"
 
 BASE_DIR = Path(__file__).parent.parent
 LOCALES_DIR = BASE_DIR / 'locales'
