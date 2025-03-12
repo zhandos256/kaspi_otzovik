@@ -7,6 +7,8 @@ RUN pip3 install -U pip && pip3 install -r requirements.txt
 
 COPY . /app/
 
-ENV BOT_TOKEN=7692919718:AAH0myJyR66DbGjQvc9Bl1YBeCHOl-nnyjs
+ENV BOT_TOKEN=""
 
-CMD [ "sh", "-c", "/app/init.sh && python /app/src/main.py" ]
+RUN chmod +x run.sh
+
+CMD [ "sh", "-c", "/app/run.sh" ]
