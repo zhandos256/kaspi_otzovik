@@ -9,8 +9,8 @@ router = Router()
 
 @router.message(Command('help'))
 async def help(msg: types.Message):
-    t = [
+    temp_msg = (
         _('/start - Начать работу бота\n'),
         _('Есть вопросы? <b>Ответим тут</b> - @clementshop'),
-    ]
-    await msg.answer(text='\n'.join(t), reply_markup=back_menu_kb())
+    )
+    await msg.answer(text='\n'.join(temp_msg), reply_markup=back_menu_kb())
