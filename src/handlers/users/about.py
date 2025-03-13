@@ -8,7 +8,7 @@ router = Router()
 
 @router.callback_query(F.data == 'about')
 async def about(call: types.CallbackQuery):
-    t = [
+    temp_msg = (
         _('Как это работает:\n'),
         _('1) Бот автоматически подставит данные вашего заказа в готовый шаблон.\n'),
         _(' 📋 Пример:\n'),
@@ -17,5 +17,5 @@ async def about(call: types.CallbackQuery):
         _('3) Просто нажмите на ссылку, и ваш шаблон будет отправлен в WhatsApp.\n'),
         _('👉 Нажмите /start, чтобы начать.'),
         _('❓ Есть вопросы? Напишите — @clementshop\n'),
-    ]
-    await call.message.edit_text(text='\n'.join(t), reply_markup=back_menu_kb())
+    )
+    await call.message.edit_text(text='\n'.join(temp_msg), reply_markup=back_menu_kb())
