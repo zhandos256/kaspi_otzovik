@@ -7,25 +7,20 @@ from keyboards.inline.menu import back_menu_kb
 
 router = Router()
 
+lang_messages = {
+    "kk": "Интерфейс тілі жаңартылды!",
+    "ru": "Язык интерфейса обновлен!"
+}
 
 @router.callback_query(F.data == 'lang')
 async def lang_cb(call: types.CallbackQuery):
     await call.message.edit_text(text=_('Выберите язык'), reply_markup=lang_kb())
 
 
-@router.callback_query(F.data == 'kk')
-async def update_lang_kk(call: types.CallbackQuery):
-    await update_user_lang(tg_userid=call.from_user.id, value='kk')
+@router.callback_query(F.data.in_(['kk', 'ru']))
+async def update_lang(call: types.CallbackQuery):
+    await update_user_lang(tg_userid=call.from_user.id, value=call.data)
     await call.message.edit_text(
-        text='Интерфейс тілі жаңартылды!',
-        reply_markup=back_menu_kb()
-    )
-
-
-@router.callback_query(F.data == 'ru')
-async def update_lang_ru(call: types.CallbackQuery):
-    await update_user_lang(tg_userid=call.from_user.id, value='ru')
-    await call.message.edit_text(
-        text='Язык интерфейса обновлен!',
+        text=lang_messages[call.data],
         reply_markup=back_menu_kb()
     )
