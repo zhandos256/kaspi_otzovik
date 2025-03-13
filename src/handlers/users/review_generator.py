@@ -6,7 +6,7 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.utils.markdown import hlink
 from aiogram.utils.i18n import gettext as _
 
-from db.query import (
+from database.query import (
     get_template_msg,
     update_template_msg,
     reset_template_msg_default,
@@ -27,13 +27,13 @@ class Template(StatesGroup):
 
 @router.callback_query(F.data == 'generate_url')
 async def generate_url_handler(call: types.CallbackQuery, state: FSMContext):
-    t = [
+    temp_msg = (
         _('Отправьте мне следующие данные:\n'),
         _('<b><u>Имя Товара</u></b>, <b><u>Номер Заказа</u></b>, <b><u>Артикул Продукта</u></b>, <b><u>Номер Телефона</u></b>\n'),
         _('📋 Пример:\n'),
         _('<b>iPhone 16, 42145214, 110145324, 77089091122</b>'),
-    ]
-    await call.message.edit_text(text='\n'.join(t), reply_markup=cancel_kb())
+    )
+    await call.message.edit_text(text='\n'.join(temp_msg), reply_markup=cancel_kb())
     await state.set_state(Template.url)
 
 
@@ -53,7 +53,7 @@ async def url_state_handler(msg: types.Message, state: FSMContext):
 
 @router.message(Template.url)
 async def invalid_url_state_handler(msg: types.Message):
-    t = [
+    temp_msg = (
         _('❗ Не Правильный Ввод, Попробуйте Снова!\n'),
         _('Отправьте мне следующие данные:\n'),
         _('<b><u>Имя Товара</u></b>'),
@@ -62,8 +62,8 @@ async def invalid_url_state_handler(msg: types.Message):
         _('<b><u>Номер Телефона</u></b>\n'),
         _('📋 Пример:\n'),
         _('<b><u>iPhone 16, 42145214, 110145324, 77089091122</u></b>'),
-    ]
-    await msg.answer(text='\n'.join(t), reply_markup=cancel_kb())
+    )
+    await msg.answer(text='\n'.join(temp_msg), reply_markup=cancel_kb())
 
 
 @router.callback_query(F.data == 'template_msg')
@@ -78,7 +78,7 @@ class EditTemplate(StatesGroup):
 
 @router.callback_query(F.data == 'edit_template')
 async def edit_template_msg(call: types.CallbackQuery, state: FSMContext):
-    t = [
+    temp_msg = (
         _('Отправьте ваш шаблонный текст одним сообщением.\n'),
         _('В шаблоне должны присутствовать следующие данные:\n'),
         _('<b><u>{ordercode}</u></b> — номер заказа'),
@@ -95,8 +95,8 @@ async def edit_template_msg(call: types.CallbackQuery, state: FSMContext):
         _('С уважением,'),
         _('Каспи магазин'),
         _('------------------------'),
-    ]
-    await call.message.edit_text(text='\n'.join(t), reply_markup=cancel_kb())
+    )
+    await call.message.edit_text(text='\n'.join(temp_msg), reply_markup=cancel_kb())
     await state.set_state(EditTemplate.text)
 
 
@@ -109,12 +109,12 @@ async def edit_template_state_handler(msg: types.Message, state: FSMContext):
 
 @router.message(EditTemplate.text)
 async def invalid_update_state(msg: types.Message):
-    t = [
+    temp_msg = (
         _('Не верный шаблонный текст, попробуйте заново!\n'),
         _('В шаблоне должны быть <b><u>{ordercode} {productname} {link}</u></b>\n'),
         _('Также шаблон должен содержать не меньше <b><u>50</u></b> и не больше <b><u>4096</u></b> символов'),
-    ]
-    await msg.answer(text='\n'.join(t), reply_markup=cancel_kb())
+    )
+    await msg.answer(text='\n'.join(temp_msg), reply_markup=cancel_kb())
 
 
 @router.callback_query(F.data == 'reset_template_default')

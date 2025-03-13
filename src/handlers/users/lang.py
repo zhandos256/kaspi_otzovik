@@ -1,7 +1,7 @@
 from aiogram import F, Router, types
 from aiogram.utils.i18n import gettext as _
 
-from db.query import update_user_lang
+from database.query import update_user_lang
 from keyboards.inline.lang import lang_kb
 from keyboards.inline.menu import back_menu_kb
 

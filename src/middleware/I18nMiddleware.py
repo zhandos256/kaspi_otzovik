@@ -4,7 +4,7 @@ from aiogram.types import TelegramObject
 from aiogram.utils.i18n import I18n, I18nMiddleware
 
 from core.const import LOCALES_DIR
-from db.query import get_user_lang
+from database.query import get_user_lang
 
 
 class CustomI18nMiddleware(I18nMiddleware):
@@ -12,7 +12,7 @@ class CustomI18nMiddleware(I18nMiddleware):
         user = data['event_from_user']
         tg_userid = int(user.id)
         res = await get_user_lang(tg_userid=tg_userid)
-        return res if res else 'ru'
+        return res or 'ru'
 
 
 i18n = I18n(path=LOCALES_DIR, default_locale='ru', domain='messages')
