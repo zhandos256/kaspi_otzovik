@@ -11,10 +11,10 @@ async def echo(msg: types.Message, state: FSMContext):
     if st is not None:
         pass
     else:
-        t = [
+        temp_msg = (
             _('❗ Извините, я не понимаю ваше сообщение\n'),
             _('/start - Начать работу боту'),
             _('/help - Получить справку\n'),
             _('Есть вопросы? <b>Ответим тут</b> - @clementshop'),
-        ]
-        await msg.answer(text='\n'.join(t))
+        )
+        await msg.answer(text='\n'.join(temp_msg))
